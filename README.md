@@ -1,106 +1,43 @@
-[![Build Status](https://travis-ci.org/biggora/caminte.svg?branch=master)](https://travis-ci.org/biggora/caminte)
-[![Dependency Status](https://gemnasium.com/biggora/caminte.svg)](https://gemnasium.com/biggora/caminte)
-[![NPM version](https://badge.fury.io/js/caminte.svg)](http://badge.fury.io/js/caminte)
-## About CaminteJS
+## About CanarioJS
 
-CaminteJS is cross-db ORM for nodejs, providing common interface to access
-most popular database formats.
+CanarioJS is cross-db ORM for nodejs, providing common interface to access
+most popular database formats. We are a fork of the [CaminteJS](
+https://github.com/biggora/caminte) project, which hasn't received updates for a few years.
 
-#### CaminteJS adapters:
-    mysql, sqlite3, riak, postgres, couchdb, mongodb, redis, neo4j, firebird, rethinkdb, tingodb
+#### CanarioJS adapters:
+    mysql, sqlite3, postgres, couchdb, mongodb, redis, neo4j, firebird, rethinkdb, tingodb
 
 <table>
     <tr>
-      <td><img width="100" src="https://github.com/biggora/caminte/raw/master/media/memory.png"/></td>
-      <td><img width="100" src="https://github.com/biggora/caminte/raw/master/media/mongodb.png"/></td>
-      <td><img width="100" src="https://github.com/biggora/caminte/raw/master/media/mysql.png"/></td>
-      <td><img width="100" src="https://github.com/biggora/caminte/raw/master/media/postgresql.png"/></td>
-      <td><img width="100" src="https://github.com/biggora/caminte/raw/master/media/sqlite.png"/></td>
-      <td><img width="100" src="https://github.com/biggora/caminte/raw/master/media/mariadb.png"/></td>
-      <td><img width="100" src="https://github.com/biggora/caminte/raw/master/media/firebird.png"/></td>   
+      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/memory.png"/></td>
+      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/mongodb.png"/></td>
+      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/mysql.png"/></td>
+      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/postgresql.png"/></td>
+      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/sqlite.png"/></td>
+      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/mariadb.png"/></td>
+      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/firebird.png"/></td>   
     </tr>
     <tr>
-      <td><img width="100" src="https://github.com/biggora/caminte/raw/master/media/couchdb.png"/></td>
-      <td><img width="100" src="https://github.com/biggora/caminte/raw/master/media/rethinkdb.png"/></td>
-      <td><img width="100" src="https://github.com/biggora/caminte/raw/master/media/redis.png"/></td> 
-      <td><img width="100" src="https://github.com/biggora/caminte/raw/master/media/tingodb.png"/></td>      
-      <td><img width="100" src="https://github.com/biggora/caminte/raw/master/media/neo4j.png"/></td> 
-      <td><img width="100" src="https://github.com/biggora/caminte/raw/master/media/arangodb.png"/></td>
-      <td><img width="100" src="https://github.com/biggora/caminte/raw/master/media/cassandra.png"/></td>
+      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/couchdb.png"/></td>
+      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/rethinkdb.png"/></td>
+      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/redis.png"/></td> 
+      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/tingodb.png"/></td>      
+      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/neo4j.png"/></td> 
+      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/arangodb.png"/></td>
+      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/cassandra.png"/></td>
     </tr>
 </table>
 
 ## Installation
 
 First install [node.js](http://nodejs.org/). Then:
-
-    $ npm install caminte --save
-
-
-## Overview
-
-* [Command line interface](https://github.com/biggora/caminte#cli)
-* [Usage](https://github.com/biggora/caminte#usage)
-* [Connecting to DB](https://github.com/biggora/caminte/wiki/Connecting-to-DB#connecting)
-* [Defining a Model](https://github.com/biggora/caminte/wiki/Defining-a-Model#define-model)
-* [Define Indices](https://github.com/biggora/caminte/wiki/Defining-a-Model#define-indices)
-* [Define Primary Keys](https://github.com/biggora/caminte/wiki/Defining-a-Model#define-primary-keys)
-* [Schema data types](https://github.com/biggora/caminte/wiki/Schema-data-types#types)
-* [Accessing a Model](https://github.com/biggora/caminte/wiki/Defining-a-Model#accessing-a-model)
-* [Setup Relationships](https://github.com/biggora/caminte/wiki/Setup-Relationships-&-Validations#setup-relationships)
-* [Setup Validations](https://github.com/biggora/caminte/wiki/Setup-Relationships-&-Validations#setup-validations)
-* [Common API methods](https://github.com/biggora/caminte/wiki/Common-API-methods#api)
-* [Define any Custom Method](https://github.com/biggora/caminte/wiki/Common-API-methods#custom)
-* [Query Interface](https://github.com/biggora/caminte/wiki/Query-Interface#queries)
-* [Middleware (Hooks)](https://github.com/biggora/caminte/wiki/Middleware#middleware)
-* [Object lifecycle](https://github.com/biggora/caminte/wiki/Object-lifecycle#lifecycle)
-* [Your own database adapter](https://github.com/biggora/caminte/wiki/Your-own-database-adapter#adapter)
-* [Running tests](https://github.com/biggora/caminte/wiki/Running-tests)
-
-
-## Online model creator
-
-Create CaminteJS Models in few minutes with [online model creator](http://www.camintejs.com/en/creator). 
-
-## CLI
-
-Use the command line interface tool, `caminte`, to quickly create an models.
-
-    $ npm install caminte-cli -g
-    
-Create structure:
-
-    $ caminte -i -a mysql
-    
-Create model:
-
-    $ caminte -m User active:int name email password note:text created:date
-    # with tests  
-    $ caminte -t -m User active:int name email password note:text created:date
-    
-Create Tables:
-
-    After created models, you can enable env `AUTOUPDATE` to true, when app initialize, this try create tables structures on database.
-    
-Create model and routes:
-
-    $ caminte -c Post published:bool title content:text created:date
-    # with tests    
-    $ caminte -t -c User active:int name email password note:text created:date
-    
-    
-Create model and routes from SQL dump:
-
-    $ caminte -d dumpfile.sql
-    
-[caminte-cli more details.](https://github.com/biggora/caminte-cli)
-
+    $npm install git+https://github.com/leandroasilva/canario.git --save
 
 ## Usage
 
 ```javascript
-var caminte = require('caminte');
-var Schema  = caminte.Schema;
+var caminte = require('canario');
+var Schema  = canario.Schema;
 var schema  = new Schema('redis', {port: 6379});
 
 // define models
@@ -150,9 +87,9 @@ User.hasMany(Post,   {as: 'posts',  foreignKey: 'userId'});
 // Common API methods
 
 var user = new User({ 
-    name:       'Alex',
-    email:      'example@domain.aga',
-    age:        40,
+    name:       'Leandro',
+    email:      'example@domain.com',
+    age:        37,
     gender:     'male'
 });
 
@@ -206,48 +143,31 @@ Now all common logic described in `./lib/*.js`, and database-specific stuff in `
 
 If you have found a bug please write unit test, and make sure all other tests still pass before pushing code to repo.
 
-## Recommend extensions
-
-- [TrinteJS - Javascrpt MVC Framework for Node.JS](http://www.trintejs.com/)
-- [Cross-db Session Storage for ExpressJS](https://github.com/biggora/connect-caminte)
-- [MongoDB Session Storage for ExpressJS](https://github.com/biggora/express-mongodb)
-- [Middleware exposing user-agent for NodeJS](https://github.com/biggora/express-useragent)
-- [Uploading files middleware for NodeJS](https://github.com/biggora/express-uploader)
-- [2CO NodeJS adapter for 2checkout API payment gateway](https://github.com/biggora/2co)
-
 ## License
 
-(The MIT License)
+The MIT License (MIT)
 
-Copyright (c) 2011 by Anatoliy Chakkaev <mail [åt] anatoliy [døt] in>
+Copyright (c) 2022 Leandro A Silva
 
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 ## Resources
 
-- Visit the [author website](http://www.gordejev.lv).
-- Visit the [CaminteJS](http://www.camintejs.com) home page.
-- Follow [@biggora](https://twitter.com/#!/biggora) on Twitter for updates.
-- Report issues on the [github issues](https://github.com/biggora/caminte/issues) page.
-
-[![Analytics](https://ga-beacon.appspot.com/UA-22788134-5/caminte/readme)](https://github.com/igrigorik/ga-beacon) 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/biggora/caminte/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+- Report issues on the [github issues](https://github.com/leandroasilva/canario/issues) page.
 
