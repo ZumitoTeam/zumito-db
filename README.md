@@ -31,7 +31,12 @@ https://github.com/biggora/canario) project, which hasn't received updates for a
 ## Installation
 
 First install [node.js](http://nodejs.org/). Then:
-    $ npm install canario --save
+
+```bash
+npm install canario
+# or
+yarn add canario
+```
 
 ## Usage
 
