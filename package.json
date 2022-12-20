@@ -1,68 +1,12 @@
 {
     "name": "canario",
     "description": "ORM for every database: redis, mysql, neo4j, mongodb, rethinkdb, postgres, sqlite, tingodb",
-    "version": "0.4.1",
+    "version": "1.0.0",
     "author": {
-        "name": "Aleksej Gordejev",
-        "email": "aleksej@gordejev.lv",
-        "url": "http://www.gordejev.lv"
+        "name": "Leandro A Silva",
+        "email": "halk_lenson@hotmail.com"
     },
-    "homepage": "http://camintejs.com/",
     "license": "MIT",
-    "contributors": [
-        {
-            "name": "Aleksej Gordejev",
-            "email": "aleksej@gordejev.lv"
-        },
-        {
-            "name": "Anatoliy Chakkaev",
-            "email": "rpm1602@gmail.com"
-        },
-        {
-            "name": "Julien Guimont",
-            "email": "julien.guimont@gmail.com"
-        },
-        {
-            "name": "Joseph Junker",
-            "email": "joseph.jnk@gmail.com"
-        },
-        {
-            "name": "Henri Bergius",
-            "email": "henri.bergius@iki.fi"
-        },
-        {
-            "name": "redvulps",
-            "email": "fabopereira@gmail.com"
-        },
-        {
-            "name": "Felipe Sateler",
-            "email": "fsateler@gmail.com"
-        },
-        {
-            "name": "Amir M. Mahmoudi",
-            "email": "a@geeknux.com"
-        },
-        {
-            "name": "Justinas Stankevičius",
-            "email": "justinas@justinas.me"
-        },
-        {
-            "name": "Rick O'Toole",
-            "email": "patrick.n.otoole@gmail.com"
-        },
-        {
-            "name": "Nicholas Westlake",
-            "email": "nicholasredlin@gmail.com"
-        },
-        {
-            "name": "Michael Pauley",
-            "email": ""
-        },
-        {
-            "name": "Tyrone Dougherty",
-            "email": "email@tyronedougherty.com"
-        }
-    ],
     "keywords": [
         "orm",
         "cross-db",
@@ -92,7 +36,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/biggora/canario.git"
+        "url": "git://github.com/leandroasilva/canario.git"
     },
     "main": "index.js",
     "scripts": {
