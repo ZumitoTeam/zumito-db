@@ -2,7 +2,7 @@
 
 CanarioJS is cross-db ORM for nodejs, providing common interface to access
 most popular database formats. We are a fork of the [CaminteJS](
-https://github.com/biggora/caminte) project, which hasn't received updates for a few years.
+https://github.com/biggora/canario) project, which hasn't received updates for a few years.
 
 #### CanarioJS adapters:
     mysql, sqlite3, postgres, couchdb, mongodb, redis, neo4j, firebird, rethinkdb, tingodb
@@ -31,12 +31,12 @@ https://github.com/biggora/caminte) project, which hasn't received updates for a
 ## Installation
 
 First install [node.js](http://nodejs.org/). Then:
-    $npm install git+https://github.com/leandroasilva/canario.git --save
+    $ npm install git+https://github.com/leandroasilva/canario.git --save
 
 ## Usage
 
 ```javascript
-var caminte = require('canario');
+var canario = require('canario');
 var Schema  = canario.Schema;
 var schema  = new Schema('redis', {port: 6379});
 
