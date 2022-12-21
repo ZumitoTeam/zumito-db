@@ -2,7 +2,7 @@
 
 CanarioJS is cross-db ORM for nodejs, providing common interface to access
 most popular database formats. We are a fork of the [CaminteJS](
-https://github.com/biggora/canario) project, which hasn't received updates for a few years.
+https://github.com/biggora/caminte) project, which hasn't received updates for a few years.
 
 #### CanarioJS adapters:
     mysql, sqlite3, postgres, couchdb, mongodb, redis, neo4j, firebird, rethinkdb, tingodb

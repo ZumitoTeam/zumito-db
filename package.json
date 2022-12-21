@@ -73,12 +73,11 @@
         "mysql": "^2.15.0",
         "node-neo4j": "^2.0.3",
         "pg": "^7.4.1",
-        "redis": "^2.8.0",
+        "redis": "^4.5.1",
         "rethinkdb": "^2.3.3",
-        "riak-js": "^1.1.0",
         "semicov": "^0.2.0",
         "should": "^13.2.1",
-        "sqlite3": "^4.0.0",
+        "sqlite3": "^5.1.4",
         "underscore": "^1.9.0"
     },
     "optionalDependencies": {}
