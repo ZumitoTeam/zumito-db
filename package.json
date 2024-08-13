@@ -2,10 +2,6 @@
     "name": "zumito-db",
     "description": "ORM for every database: redis, mysql, neo4j, mongodb, rethinkdb, postgres, sqlite, tingodb",
     "version": "1.0.0",
-    "author": {
-        "name": "Leandro A Silva",
-        "email": "halk_lenson@hotmail.com"
-    },
     "license": "MIT",
     "keywords": [
         "orm",
