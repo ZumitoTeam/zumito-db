@@ -2,7 +2,7 @@
 
 Zumito-DB is cross-db ORM for nodejs, providing common interface to access
 most popular database formats. We are a fork of the [CaminteJS](
-https://github.com/biggora/caminte)/[CanarioJS](https://github.com/ZumitoTeam/zumito-db/) projects, which hasn't received updates for a few years.
+https://github.com/biggora/caminte)/[CanarioJS](https://github.com/leandroasilva/canario/) projects, which hasn't received updates for a few years.
 
 #### Zumito-DB adapters:
     mysql, sqlite3, postgres, couchdb, mongodb, redis, neo4j, firebird, rethinkdb, tingodb
