@@ -1,30 +1,30 @@
-## About CanarioJS
+## About Zumito-DB
 
-CanarioJS is cross-db ORM for nodejs, providing common interface to access
+Zumito-DB is cross-db ORM for nodejs, providing common interface to access
 most popular database formats. We are a fork of the [CaminteJS](
-https://github.com/biggora/caminte) project, which hasn't received updates for a few years.
+https://github.com/biggora/caminte)/[CanarioJS](https://github.com/ZumitoTeam/zumito-db/) projects, which hasn't received updates for a few years.
 
-#### CanarioJS adapters:
+#### Zumito-DB adapters:
     mysql, sqlite3, postgres, couchdb, mongodb, redis, neo4j, firebird, rethinkdb, tingodb
 
 <table>
     <tr>
-      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/memory.png"/></td>
-      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/mongodb.png"/></td>
-      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/mysql.png"/></td>
-      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/postgresql.png"/></td>
-      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/sqlite.png"/></td>
-      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/mariadb.png"/></td>
-      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/firebird.png"/></td>   
+      <td><img width="100" src="https://github.com/ZumitoTeam/zumito-db/raw/main/media/memory.png"/></td>
+      <td><img width="100" src="https://github.com/ZumitoTeam/zumito-db/raw/main/media/mongodb.png"/></td>
+      <td><img width="100" src="https://github.com/ZumitoTeam/zumito-db/raw/main/media/mysql.png"/></td>
+      <td><img width="100" src="https://github.com/ZumitoTeam/zumito-db/raw/main/media/postgresql.png"/></td>
+      <td><img width="100" src="https://github.com/ZumitoTeam/zumito-db/raw/main/media/sqlite.png"/></td>
+      <td><img width="100" src="https://github.com/ZumitoTeam/zumito-db/raw/main/media/mariadb.png"/></td>
+      <td><img width="100" src="https://github.com/ZumitoTeam/zumito-db/raw/main/media/firebird.png"/></td>   
     </tr>
     <tr>
-      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/couchdb.png"/></td>
-      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/rethinkdb.png"/></td>
-      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/redis.png"/></td> 
-      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/tingodb.png"/></td>      
-      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/neo4j.png"/></td> 
-      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/arangodb.png"/></td>
-      <td><img width="100" src="https://github.com/leandroasilva/canario/raw/main/media/cassandra.png"/></td>
+      <td><img width="100" src="https://github.com/ZumitoTeam/zumito-db/raw/main/media/couchdb.png"/></td>
+      <td><img width="100" src="https://github.com/ZumitoTeam/zumito-db/raw/main/media/rethinkdb.png"/></td>
+      <td><img width="100" src="https://github.com/ZumitoTeam/zumito-db/raw/main/media/redis.png"/></td> 
+      <td><img width="100" src="https://github.com/ZumitoTeam/zumito-db/raw/main/media/tingodb.png"/></td>      
+      <td><img width="100" src="https://github.com/ZumitoTeam/zumito-db/raw/main/media/neo4j.png"/></td> 
+      <td><img width="100" src="https://github.com/ZumitoTeam/zumito-db/raw/main/media/arangodb.png"/></td>
+      <td><img width="100" src="https://github.com/ZumitoTeam/zumito-db/raw/main/media/cassandra.png"/></td>
     </tr>
 </table>
 
@@ -33,16 +33,16 @@ https://github.com/biggora/caminte) project, which hasn't received updates for a
 First install [node.js](http://nodejs.org/). Then:
 
 ```bash
-npm install canario
+npm install zumito-db
 # or
-yarn add canario
+yarn add zumito-db
 ```
 
 ## Usage
 
 ```javascript
-var canario = require('canario');
-var Schema  = canario.Schema;
+var zumitodb = require('zumito-db');
+var Schema  = zumitodb.Schema;
 var schema  = new Schema('redis', {port: 6379});
 
 // define models
@@ -174,5 +174,5 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Resources
 
-- Report issues on the [github issues](https://github.com/leandroasilva/canario/issues) page.
+- Report issues on the [github issues](https://github.com/ZumitoTeam/zumito-db/issues) page.
 
