@@ -1,0 +1,46 @@
+name: Publish package to npm
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org/'
+
+      - id: version
+        name: Check package.json version change
+        run: |
+          prev_version=$(git show ${{ github.event.before }}:package.json | jq -r .version)
+          curr_version=$(jq -r .version package.json)
+          echo "previous=$prev_version" >> $GITHUB_OUTPUT
+          echo "current=$curr_version" >> $GITHUB_OUTPUT
+          if [ "$prev_version" != "$curr_version" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Install dependencies
+        if: steps.version.outputs.changed == 'true'
+        run: npm ci
+
+      - name: Build
+        if: steps.version.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Publish to npm
+        if: steps.version.outputs.changed == 'true'
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
