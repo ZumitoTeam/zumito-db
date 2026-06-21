@@ -1,5 +1,6 @@
 import { DatabaseDriver } from './DriverInterface.js';
 import { QueryIR, ModelMetadata } from '../types.js';
+import { mkdirSync } from 'fs';
 
 interface TingoDriverConfig {
     path: string;
@@ -10,6 +11,7 @@ export class TingoDriver implements DatabaseDriver {
     public raw: any;
 
     async connect(config: TingoDriverConfig): Promise<void> {
+        mkdirSync(config.path || './db/tingodb', { recursive: true });
         try {
             // @ts-ignore - optional peer dependency
             const tingoModule = await import('tingodb');
