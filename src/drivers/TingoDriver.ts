@@ -116,6 +116,15 @@ export class TingoDriver implements DatabaseDriver {
         });
     }
 
+    async listCollections(): Promise<string[]> {
+        return new Promise((resolve, reject) => {
+            this.db.collections((err: any, names: string[]) => {
+                if (err) reject(err);
+                else resolve(names || []);
+            });
+        });
+    }
+
     private buildFilter(query: QueryIR): Record<string, any> {
         if (!query.where || query.where.length === 0) return {};
         const filter: Record<string, any> = {};

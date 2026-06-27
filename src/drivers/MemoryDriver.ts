@@ -96,6 +96,10 @@ export class MemoryDriver implements DatabaseDriver {
         this.sequences.delete(name);
     }
 
+    async listCollections(): Promise<string[]> {
+        return Array.from(this.collections.keys());
+    }
+
     private applyWhere(docs: StoredDoc[], where: WhereClause[]): StoredDoc[] {
         if (!where || where.length === 0) return [...docs];
 

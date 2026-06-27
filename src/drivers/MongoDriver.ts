@@ -87,6 +87,11 @@ export class MongoDriver implements DatabaseDriver {
         await this.db.collection(name).drop().catch(() => {});
     }
 
+    async listCollections(): Promise<string[]> {
+        const cols = await this.db.listCollections().toArray();
+        return cols.map((c: any) => c.name);
+    }
+
     async transaction<T>(fn: (session: any) => Promise<T>): Promise<T> {
         const session = this.client.startSession();
         try {

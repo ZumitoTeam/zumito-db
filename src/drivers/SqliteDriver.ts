@@ -76,6 +76,11 @@ export class SqliteDriver implements DatabaseDriver {
         this.db.exec(`DROP TABLE IF EXISTS ${name}`);
     }
 
+    async listCollections(): Promise<string[]> {
+        const rows = this.db.prepare(`SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE '_zumito_%' AND name NOT LIKE 'sqlite_%'`).all();
+        return rows.map((r: any) => r.name);
+    }
+
     async transaction<T>(fn: (trx: any) => Promise<T>): Promise<T> {
         const trx = this.db.transaction(async () => {
             return fn(trx);

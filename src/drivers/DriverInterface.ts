@@ -13,6 +13,7 @@ export interface DatabaseDriver {
 
     ensureSchema(metadata: ModelMetadata): Promise<void>;
     dropCollection(name: string): Promise<void>;
+    listCollections(): Promise<string[]>;
 
     transaction?<T>(fn: (trx: any) => Promise<T>): Promise<T>;
 

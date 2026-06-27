@@ -77,6 +77,26 @@ export class DatabaseManager {
         await this.driver.dropCollection(name);
     }
 
+    async listCollections(): Promise<string[]> {
+        return this.driver.listCollections();
+    }
+
+    getCollectionMetadata(): { name: string; fields: any[]; relations: any[] }[] {
+        return Array.from(this.modelMetadata.values()).map(m => ({
+            name: m.collection,
+            fields: m.fields.map(f => ({
+                name: f.name,
+                propertyKey: f.propertyKey,
+                type: f.type,
+                primary: f.primary,
+                unique: f.unique,
+                nullable: f.nullable,
+                default: f.default,
+            })),
+            relations: m.relations,
+        }));
+    }
+
     private async loadDriver(name: string, _config: Record<string, any>): Promise<DatabaseDriver> {
         switch (name) {
             case 'memory':
